@@ -20,7 +20,7 @@ SRCS = $(wildcard *.c)
 OBJS = $(SRCS:.c=.o)
 
 # Name of the executable - YOU EDIT THIS BIT WITH YOUR EXECUTABLE NAME
-TARGET = file_manager
+TARGET = file_io
 
 # Build the executable
 $(TARGET): $(OBJS)
@@ -30,7 +30,7 @@ $(TARGET): $(OBJS)
 # if you use the maths library, you will need to add -lm at the end, eg.
 # 	$(CC) $(CFLAGS) -c $< -o $@ -lm
 # this tells it to link the maths library.
-%.o: %.c
+%.o: %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Clean up the generated files
